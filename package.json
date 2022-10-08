@@ -12,7 +12,7 @@
     "test": "vitest",
     "lint": "eslint --fix --ext .ts,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.vue\"",
-    "prepare": "husky install"
+    "prepare": "simple-git-hooks"
   },
   "keywords": [],
   "author": "",
@@ -48,7 +48,6 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
-    "pre-push": "cd ../../ && npm run format",
-    "preserveUnused": true
+    "pre-push": "commitlint"
   }
 }
