@@ -15,6 +15,9 @@ const sidebar = [
 const config = {
   title: 'Simple UI',
   description: 'A simple Vue3 UI Components',
+  head:[
+    ['link', { rel: 'icon', href: '/logo.svg' }]
+  ],
   themeConfig: {
     siteTitle: 'Simple UI',
     logo: '/logo.svg',

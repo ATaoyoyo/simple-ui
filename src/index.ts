@@ -1,6 +1,6 @@
-import { createApp } from "vue";
+import { createApp } from 'vue'
 
-import SimpleUI from "./entry";
+import SimpleUI from './entry'
 
 createApp({
   template: `
@@ -14,4 +14,4 @@ createApp({
         `,
 })
   .use(SimpleUI)
-  .mount("#app");
+  .mount('#app')
