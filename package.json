@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://simple-ui-one.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
