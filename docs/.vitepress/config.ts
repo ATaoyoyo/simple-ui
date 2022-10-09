@@ -1,29 +1,42 @@
-const sidebar = {
-    '/': [
-        { text: '快速开始', link: '/' },
-        {
-            text: '通用',
-            children: [
-                { text: 'Button 按钮', link: '/components/Button/' },
-            ]
-        },
-        { text: '导航' },
-        { text: '反馈' },
-        { text: '数据录入' },
-        { text: '数据展示' },
-        { text: '布局' },
-    ]
-}
+const sidebar = [
+  {
+    text: 'Introduction',
+    items: [{ text: 'Guide', link: '/guide/' }],
+  },
+  {
+    text: 'Components',
+    items: [
+      { text: 'Button', link: '/components/button/' },
+      { text: 'Border', link: '/components/border/' },
+    ],
+  },
+]
+
 const config = {
-    themeConfig: {
-        sidebar,
+  title: 'Simple UI',
+  description: 'A simple Vue3 UI Components',
+  themeConfig: {
+    siteTitle: 'Simple UI',
+    logo: '/logo.svg',
+    socialLinks: [{ icon: 'github', link: 'https://github.com/ATaoyoyo/simple-ui' }],
+    nav: [
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Configs', link: '/configs' },
+      { text: 'Components', link: '/components' },
+    ],
+    sidebar,
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2019-present ATAOYOYO',
     },
-    markdown: {
-        config: md => {
-            const {demoBlockPlugin} = require('vitepress-theme-demoblock')
-            md.use(demoBlockPlugin)
-        }
-    }
+  },
+
+  markdown: {
+    config: md => {
+      const { demoBlockPlugin } = require('vitepress-theme-demoblock')
+      md.use(demoBlockPlugin)
+    },
+  },
 }
 
 export default config

@@ -9,6 +9,9 @@
   <img src="https://img.shields.io/github/forks/ATaoyoyo/t-ui" />
   <img src="https://img.shields.io/github/stars/ATaoyoyo/t-ui" />
   <img src="https://img.shields.io/github/license/ATaoyoyo/t-ui" />
+
+  [![codecov](https://codecov.io/gh/ATaoyoyo/simple-ui/branch/main/graph/badge.svg?token=VVDHCRFSAM)](https://codecov.io/gh/ATaoyoyo/simple-ui)
+
 </div>
 
 ## Features
