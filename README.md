@@ -26,13 +26,13 @@
 ## Install
 
 ```shell
-npm i terrific-ui
+npm i simple-ui-vite
 ```
 
 or
 
 ```shell
-yarn add terrific-ui
+yarn add simple-ui-vite
 ```
 
 ## Quick Start
