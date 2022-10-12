@@ -4,7 +4,7 @@ import 'uno.css'
 import { props, buttonTypeColor } from './props'
 
 export default defineComponent({
-  name: 'SButton',
+  name: 'sm-button',
 
   props,
 
