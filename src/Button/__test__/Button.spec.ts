@@ -29,7 +29,7 @@ describe('color', () => {
       wrapper
         .classes()
         .map(v => v.replace('\n', ''))
-        .includes('bg-blue-500')
+        .includes('btn-default')
     ).toBe(true)
   })
   test('red', () => {
@@ -38,14 +38,14 @@ describe('color', () => {
         default: 'Button',
       },
       props: {
-        color: 'red',
+        type: 'success',
       },
     })
     expect(
       wrapper
         .classes()
         .map(v => v.replace('\n', ''))
-        .includes('bg-red-500')
+        .includes('btn-success')
     ).toBe(true)
   })
 })
