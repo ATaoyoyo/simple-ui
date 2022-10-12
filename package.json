@@ -47,6 +47,8 @@
     "vitest": "0.21.1"
   },
   "dependencies": {
+    "@unocss/reset": "^0.45.29",
+    "@unocss/runtime": "^0.45.29",
     "simple-git-hooks": "^2.8.0",
     "vitepress": "1.0.0-alpha.4",
     "vue": "3.2.37"

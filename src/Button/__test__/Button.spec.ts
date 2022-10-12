@@ -1,4 +1,4 @@
-import SButton from '../Button'
+import SButton from '../props'
 
 import { shallowMount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'

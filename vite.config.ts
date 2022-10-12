@@ -1,38 +1,38 @@
 /// <reference types="vitest" />
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
-import Unocss from "./config/unocss";
+import Unocss from './config/unocss'
 
 const rollupOptions = {
-  external: ["vue", "vue-router"],
+  external: ['vue', 'vue-router'],
   output: {
     globals: {
-      vue: "Vue",
+      vue: 'Vue',
     },
   },
-};
+}
 
 export default defineConfig({
   build: {
     rollupOptions,
-    minify: "terser",
+    minify: 'terser',
     sourcemap: true,
     reportCompressedSize: true, // 生成压缩大小报告
     cssCodeSplit: true,
     lib: {
-      entry: "./src/entry.ts",
-      name: "SimpleUI",
-      fileName: "simply-ui",
+      entry: './src/entry.ts',
+      name: 'SimpleUI',
+      fileName: 'simply-ui',
       // 导出模块格式
-      formats: ["es", "umd", "iife"],
+      formats: ['es', 'umd', 'iife'],
     },
   },
 
   test: {
     globals: true,
-    environment: "happy-dom",
+    environment: 'happy-dom',
     transformMode: {
       web: [/.[tj]sx$/],
     },
@@ -42,7 +42,12 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      vue: "vue/dist/vue.esm-bundler.js",
+      vue: 'vue/dist/vue.esm-bundler.js',
     },
   },
-});
+
+  server: {
+    open: true,
+    port: 8080,
+  },
+})

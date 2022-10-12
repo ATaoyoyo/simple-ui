@@ -1,56 +1,28 @@
-import { defineComponent, h, PropType, toRefs } from "vue";
-import "uno.css";
+import { defineComponent, toRefs } from 'vue'
+import 'uno.css'
 
-export type IColor =
-  | "black"
-  | "gray"
-  | "red"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "indigo"
-  | "purple"
-  | "pink";
-
-export const props = {
-  color: {
-    type: String as PropType<IColor>,
-    default: "blue",
-  },
-  icon: {
-    type: String,
-    default: "",
-  },
-};
+import { props, buttonTypeColor } from './props'
 
 export default defineComponent({
-  name: "SButton",
+  name: 'SButton',
 
-  props: props,
+  props,
 
   setup(props, { slots }) {
+    const { color, type, round, plain } = toRefs(props)
+
+    const onCLick = e => {
+      console.log(e)
+    }
+
     return () => (
       <button
-        class={`
-              py-2 
-              px-4 
-              font-semibold 
-              rounded-lg 
-              shadow-md 
-              text-white 
-              bg-${props.color}-500 
-              hover:bg-${props.color}-700 
-              border-none 
-              cursor-pointer 
-            `}
+        class={`btn-${type.value ? type.value : 'default'} ${round.value ? 'rounded-4' : ''}`}
+        onClick={(e: MouseEvent) => onCLick(e)}
       >
-        {props.icon !== "" ? (
-          <i class={`i-ic-baseline-${props.icon} p-3`} />
-        ) : (
-          ""
-        )}
-        {slots.default ? slots.default() : ""}
+        {props.icon !== '' ? <i class={`i-ic-baseline-${props.icon} p-3`} /> : ''}
+        {slots.default ? slots.default() : ''}
       </button>
-    );
+    )
   },
-});
+})

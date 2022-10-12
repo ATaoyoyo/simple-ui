@@ -1,4 +1,6 @@
 import { App } from 'vue'
+import '@unocss/reset/normalize.css'
+
 import SButton from './Button/Button'
 
 // 单独导出组件
