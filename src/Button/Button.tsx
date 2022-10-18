@@ -1,7 +1,9 @@
 import { defineComponent, toRefs } from 'vue'
-import 'uno.css'
+// import 'uno.css'
 
-import { props, buttonTypeColor } from './props'
+import { props } from './props'
+
+import './style/button.css'
 
 export default defineComponent({
   name: 'sm-button',
@@ -11,13 +13,18 @@ export default defineComponent({
   setup(props, { slots }) {
     const { color, type, round, plain } = toRefs(props)
 
+    let buttonClass = `sm-button rounded sm-button-${type.value || 'default'}`
+    if (round.value) buttonClass += ' is-round'
+    if (plain.value) buttonClass += ' is-plain'
+
     const onCLick = e => {
       console.log(e)
     }
 
     return () => (
       <button
-        class={`btn-${type.value ? type.value : 'default'} ${round.value ? 'rounded-4' : ''}`}
+        class={buttonClass}
+        style={{ color: color.value || '' }}
         onClick={(e: MouseEvent) => onCLick(e)}
       >
         {props.icon !== '' ? <i class={`i-ic-baseline-${props.icon} p-3`} /> : ''}

@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
-import Unocss from './config/unocss'
+import Unocss from './config/unocss.js'
 
 const rollupOptions = {
   external: ['vue', 'vue-router'],
@@ -49,5 +49,6 @@ export default defineConfig({
   server: {
     open: true,
     port: 8080,
+    hmr: true,
   },
 })
