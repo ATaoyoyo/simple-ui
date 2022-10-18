@@ -29,7 +29,7 @@ describe('color', () => {
       wrapper
         .classes()
         .map(v => v.replace('\n', ''))
-        .includes('btn-default')
+        .includes('sm-button-default')
     ).toBe(true)
   })
   test('red', () => {
@@ -45,7 +45,47 @@ describe('color', () => {
       wrapper
         .classes()
         .map(v => v.replace('\n', ''))
-        .includes('btn-success')
+        .includes('sm-button-success')
+    ).toBe(true)
+  })
+})
+
+describe('round', () => {
+  test('is-round', () => {
+    const wrapper = shallowMount(SButton, {
+      slots: {
+        default: 'Round Button',
+      },
+      props: {
+        round: true,
+      },
+    })
+    expect(
+      wrapper
+        .classes()
+        .map(v => v.replace('\n', ''))
+        .includes('is-round')
+    ).toBe(true)
+  })
+})
+
+describe('plain', () => {
+  test('is-plain', () => {
+    const wrapper = shallowMount(SButton, {
+      slots: {
+        default: 'Plain Button',
+      },
+      props: {
+        plain: true,
+      },
+    })
+
+    expect(wrapper.text()).toBe('Plain Button')
+    expect(
+      wrapper
+        .classes()
+        .map(v => v.replace('\n', ''))
+        .includes('is-plain')
     ).toBe(true)
   })
 })
