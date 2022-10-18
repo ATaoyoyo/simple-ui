@@ -1,11 +1,11 @@
-import Button from './Button'
+import SButton from './Button'
 import { App } from 'vue'
 import 'uno.css'
 
-export { Button }
+export { SButton }
 
 export default {
   install(app: App) {
-    app.component(Button.name, Button)
+    app.component(SButton.name, SButton)
   },
 }
