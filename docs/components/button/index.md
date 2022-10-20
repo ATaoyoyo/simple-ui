@@ -225,9 +225,9 @@ We will calculate hover color & active color automatically.
 | size                                | button size                                                     | string                | large / default /small                                        | —       |
 | type                                | button type                                                     | string                | primary / success / warning / danger / info / <del>text</del> | —       |
 | plain                               | determine whether it's a plain button                           | boolean               | —                                                             | false   |
-| text <VersionTag version="2.2.0" /> | determine whether it's a text button                            | boolean               | —                                                             | false   |
-| bg <VersionTag version="2.2.0" />   | determine whether the text button background color is always on | boolean               | —                                                             | false   |
-| link <VersionTag version="2.2.1" /> | determine whether it's a link button                            | boolean               | —                                                             | false   |
+| text | determine whether it's a text button                            | boolean               | —                                                             | false   |
+| bg    | determine whether the text button background color is always on | boolean               | —                                                             | false   |
+| link  | determine whether it's a link button                            | boolean               | —                                                             | false   |
 | round                               | determine whether it's a round button                           | boolean               | —                                                             | false   |
 | circle                              | determine whether it's a circle button                          | boolean               | —                                                             | false   |
 | loading                             | determine whether it's loading                                  | boolean               | —                                                             | false   |
