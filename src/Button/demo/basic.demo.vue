@@ -42,25 +42,32 @@ export default {
     <SButton round type="danger">Danger</SButton>
     <SButton round type="info">Info</SButton>
     <hr />
-    <SButton icon="search">Search</SButton>
-    <SButton icon="add" type="primary"></SButton>
-    <SButton icon="delete" type="success"></SButton>
-    <SButton icon="share" type="warning"></SButton>
-    <SButton icon="check" type="danger"></SButton>
-    <SButton icon="edit" type="info"></SButton>
-    <SButton plain icon="search"></SButton>
-    <SButton plain icon="add" type="primary"></SButton>
-    <SButton plain icon="delete" type="success"></SButton>
-    <SButton plain icon="share" type="warning"></SButton>
-    <SButton plain icon="check" type="danger"></SButton>
-    <SButton plain icon="edit" type="info"></SButton>
+    <SButton disabled>Default</SButton>
+    <SButton disabled type="primary">Primary</SButton>
+    <SButton disabled type="success">Success</SButton>
+    <SButton disabled type="warning">Warning</SButton>
+    <SButton disabled type="danger">Danger</SButton>
+    <SButton disabled type="info">Info</SButton>
+    <hr />
+    <SButton icon="i-uil-search">Search</SButton>
+    <SButton icon="i-uil-smile-wink" type="primary"></SButton>
+    <SButton icon="i-uil-dizzy-meh" type="success"></SButton>
+    <SButton icon="i-uil-angry" type="warning"></SButton>
+    <SButton icon="i-uil-annoyed" type="danger"></SButton>
+    <SButton icon="i-uil-annoyed-alt" type="info"></SButton>
+    <SButton plain icon="i-uil-search">Search</SButton>
+    <SButton plain icon="i-uil-smile-wink" type="primary"></SButton>
+    <SButton plain icon="i-uil-dizzy-meh" type="success"></SButton>
+    <SButton plain icon="i-uil-angry" type="warning"></SButton>
+    <SButton plain icon="i-uil-annoyed" type="danger"></SButton>
+    <SButton plain icon="i-uil-annoyed-alt" type="info"></SButton>
 
-    <SButton plain circle icon="search"></SButton>
-    <SButton plain circle icon="add" type="primary"></SButton>
-    <SButton plain circle icon="delete" type="success"></SButton>
-    <SButton plain circle icon="share" type="warning"></SButton>
-    <SButton plain circle icon="check" type="danger"></SButton>
-    <SButton plain circle icon="edit" type="info"></SButton>
+    <SButton circle icon="i-uil-search"></SButton>
+    <SButton circle icon="i-uil-smile-wink" type="primary"></SButton>
+    <SButton circle icon="i-uil-dizzy-meh" type="success"></SButton>
+    <SButton circle icon="i-uil-angry" type="warning"></SButton>
+    <SButton circle icon="i-uil-annoyed" type="danger"></SButton>
+    <SButton circle icon="i-uil-annoyed-alt" type="info"></SButton>
     <hr />
     <SButton link>default</SButton>
     <SButton link type="primary">Primary</SButton>
@@ -77,8 +84,17 @@ export default {
     <SButton link disabled type="info">Info</SButton>
 
     <SButton>
-      <template #icon>1</template>
-      Custom Icon
+      <template #icon><i class="i-uil-cog"></i></template>
+      Settings
     </SButton>
+
+    <SButton loading type="primary">Loading</SButton>
+    <SButton loading loading-icon="i-uil-yin-yang" type="primary">Loading</SButton>
+    <SButton loading type="primary">
+      <template #loading> <i class="i-uil-surprise"></i></template>
+      Loading
+    </SButton>
+
+    <SButton color="#626aef">Default</SButton>
   </div>
 </template>

@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@iconify-json/ic': 1.1.4
   '@iconify/json': ^2.1.122
   '@types/node': ^18.11.2
   '@typescript-eslint/eslint-plugin': ^5.39.0
@@ -43,7 +42,6 @@ dependencies:
   vue: 3.2.37
 
 devDependencies:
-  '@iconify-json/ic': 1.1.4
   '@iconify/json': registry.npmmirror.com/@iconify/json/2.1.122
   '@types/node': registry.npmmirror.com/@types/node/18.11.2
   '@typescript-eslint/eslint-plugin': 5.39.0_cfd7h3iktziq6hcwahu2qxhjhy
@@ -436,16 +434,6 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
-    dev: true
-
-  /@iconify-json/ic/1.1.4:
-    resolution: {integrity: sha512-NkcyCh3VHwm3L19Ys4PDnbJmMoSE6vd83xjfWofmoeKKebs4tktz/LhPIy9vcaDqRENTNVtDORQdv0e+HCOjSg==}
-    dependencies:
-      '@iconify/types': 1.1.0
-    dev: true
-
-  /@iconify/types/1.1.0:
-    resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
     dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
@@ -3273,7 +3261,7 @@ packages:
     name: '@iconify/json'
     version: 2.1.122
     dependencies:
-      '@iconify/types': registry.npmmirror.com/@iconify/types/1.1.0
+      '@iconify/types': registry.npmmirror.com/@iconify/types/2.0.0
       pathe: registry.npmmirror.com/pathe/0.3.9
     dev: true
 

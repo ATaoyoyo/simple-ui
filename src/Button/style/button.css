@@ -1,7 +1,9 @@
 .sm-button {
+  position: relative;
   line-height: 1;
   border-radius: 4px;
-  @apply px-4 py2 font-semibold border-1.5 cursor-pointer transition-300;
+  font-size: 14px;
+  @apply flex-inline items-center justify-center px-3 py2 font-semibold border-1.5 cursor-pointer transition-300;
 }
 
 .sm-button + .sm-button {
@@ -9,7 +11,7 @@
 }
 
 .sm-button.is-round {
-  @apply rounded-4;
+  @apply b-rounded-6;
 }
 
 .sm-button.is-link {
@@ -30,7 +32,21 @@
 }
 
 .sm-button__icon {
-  @apply p-2;
+  /*@apply p-2;*/
+}
+
+.sm-button.is-loading {
+  pointer-events: none;
+}
+
+.sm-button.is-loading i{
+  animation: rotateLoading 2s linear infinite;
+}
+
+@keyframes rotateLoading {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .sm-button.sm-button__default.is-circle {
@@ -38,12 +54,12 @@
 }
 
 .sm-button__default {
-  @apply text-dark-50 bg-white border-gray-200 hover:bg-blue-100 hover:border-blue-100 hover:text-blue-500 active:border-blue-300;
+  @apply text-gray-500 bg-white border-gray-200 hover:bg-blue-100 hover:border-blue-100 hover:text-blue-500 active:border-blue-300;
 }
 
 .sm-button__default.is-disabled,
 .sm-button__default.is-plain.is-disabled {
-  @apply text-gray bg-gray-100 border-gray-200 hover:text-gray hover:bg-gray-100 hover:border-gray-200;
+  @apply text-gray bg-gray-50 border-gray-200 hover:text-gray hover:bg-gray-50 hover:border-gray-200;
 }
 
 .sm-button__default.is-link {
@@ -55,7 +71,7 @@
 }
 
 .sm-button__default.is-plain {
-  @apply text-dark-50 bg-white border-gray-300 hover:text-blue-500 hover:border-blue-300 active:border-blue-300;
+  @apply text-gray-500 bg-white border-gray-300 hover:text-blue-500 hover:border-blue-300 active:border-blue-300;
 }
 
 .sm-button__primary {

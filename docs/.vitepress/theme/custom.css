@@ -1,0 +1,33 @@
+.vp-doc table {
+  width: 100%;
+}
+
+.vp-doc table, .vp-doc tbody tr, .vp-doc tbody th, .vp-doc tbody td {
+  border: none;
+  background-color: transparent;
+}
+
+.vp-doc tr {
+  border: none;
+}
+
+
+.vp-doc thead th {
+  border: none;
+}
+
+.vp-doc thead th {
+  padding: 0.6em 1em;
+  text-align: left;
+  /*max-width: 250px;*/
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.vp-doc td {
+  padding: 0.6em 1em;
+  text-align: left;
+  /*max-width: 250px;*/
+  font-size: 12px;
+  white-space: pre-wrap;
+}

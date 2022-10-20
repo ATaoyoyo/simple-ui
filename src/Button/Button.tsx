@@ -60,25 +60,21 @@ export default defineComponent({
     }
 
     const ButtonIcon = (
-      <i
-        class={['sm-button__icon', `${slots.default ? 'mr-1' : ''}`, `i-ic-baseline-${icon.value}`]}
-      >
+      <i class={['sm-button__icon', `${slots.default ? 'mr-1' : ''}`, `${icon.value}`]}>
         {slots.icon?.()}
       </i>
     )
 
     const LoadingIcon = (
       <span class="sm-button__loading">
-        <i class={['sm-button__icon mr-1', `${loadingIcon.value ? '' : 'i-ic-baseline-message'}`]}>
+        <i
+          class={[
+            'sm-button__icon mr-1',
+            `${slots.loading ? '' : loadingIcon.value ? loadingIcon.value : 'i-uil-spinner-alt'}`,
+          ]}
+        >
           {slots.loading ? slots.loading() : ''}
         </i>
-      </span>
-    )
-
-    const Children = (
-      <span class="sm-button__pre">
-        {icon.value || slots.icon ? ButtonIcon : ''}
-        {loading.value ? LoadingIcon : ''}
       </span>
     )
 
@@ -90,16 +86,22 @@ export default defineComponent({
           `${round.value ? 'is-round' : ''}`,
           `${plain.value && !link.value ? 'is-plain' : ''}`,
           `${link.value ? 'is-link' : ''}`,
+          `${link.value && disabled.value ? 'is-disabled' : ''}`,
           `${circle.value ? 'is-circle' : ''}`,
           `${loading.value ? 'is-loading' : ''}`,
-          `${disabled.value || link.value ? 'is-disabled' : ''}`,
+          `${disabled.value ? 'is-disabled' : ''}`,
         ]}
         disabled={disabled.value}
         type={nativeType.value}
-        style={{ color: color.value || '' }}
+        style={{
+          backgroundColor: color.value,
+          borderColor: color.value,
+          color: color.value && '#fff',
+        }}
         onClick={(e: MouseEvent) => handleClick(e)}
       >
-        {Children}
+        {icon.value || slots.icon ? ButtonIcon : ''}
+        {loading.value ? LoadingIcon : ''}
         <span>{slots.default ? slots.default() : ''}</span>
       </button>
     )

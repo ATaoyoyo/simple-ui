@@ -5,15 +5,26 @@ import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 import presetIcons from '@unocss/preset-icons'
 
-const icons = ['search', 'edit', 'check', 'message', 'star-off', 'delete', 'add', 'share']
-const safelist = [...icons.map(v => `i-ic-baseline-${v}`)]
-
 export default () =>
   Unocss({
     transformers: [transformerDirective(), transformerAttributifyJsx()],
-    presets: [presetUno(), presetAttributify(), presetIcons(), presetRemToPx()],
+    presets: [
+      presetIcons({
+        autoInstall: true,
+        mode: 'mask',
+        prefix: 'i-',
+        extraProperties: {
+          display: 'inline-block',
+          width: '1em',
+          height: '1em',
+          'vertical-align': 'middle',
+        },
+      }),
+      presetUno(),
+      presetAttributify(),
+      presetRemToPx(),
+    ],
     shortcuts: {
       'flex-center': 'flex justify-center items-center',
     },
-    safelist,
   })

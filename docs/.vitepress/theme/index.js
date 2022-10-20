@@ -8,6 +8,7 @@ import Demo from 'vitepress-theme-demoblock/components/Demo.vue'
 import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue'
 
 import './var.css'
+import './custom.css'
 
 export default {
   ...DefaultTheme,
