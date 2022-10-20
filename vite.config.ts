@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -27,14 +26,6 @@ export default defineConfig({
       fileName: 'simply-ui',
       // 导出模块格式
       formats: ['es', 'umd', 'iife'],
-    },
-  },
-
-  test: {
-    globals: true,
-    environment: 'happy-dom',
-    transformMode: {
-      web: [/.[tj]sx$/],
     },
   },
 
