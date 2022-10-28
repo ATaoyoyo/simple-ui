@@ -4,6 +4,8 @@ import type { Type, NativeType, Size } from './interface'
 
 import './style/button.css'
 
+import { SmIcon } from '../Icon'
+
 const buttonProps = {
   type: {
     type: String as PropType<Type>,
@@ -35,6 +37,8 @@ const buttonProps = {
 export default defineComponent({
   name: 'sm-button',
 
+  components: { SmIcon },
+
   props: buttonProps,
 
   emits: ['click'],
@@ -60,9 +64,9 @@ export default defineComponent({
     }
 
     const ButtonIcon = (
-      <i class={['sm-button__icon', `${slots.default ? 'mr-1' : ''}`, `${icon.value}`]}>
-        {slots.icon?.()}
-      </i>
+      <span class={['sm-button__icon', slots.default ? ' mr-1' : '']}>
+        {slots.icon ? slots.icon() : <sm-icon name={icon.value} />}
+      </span>
     )
 
     const LoadingIcon = (
@@ -102,7 +106,7 @@ export default defineComponent({
       >
         {icon.value || slots.icon ? ButtonIcon : ''}
         {loading.value ? LoadingIcon : ''}
-        <span>{slots.default ? slots.default() : ''}</span>
+        {slots.default ? slots.default() : ''}
       </button>
     )
   },

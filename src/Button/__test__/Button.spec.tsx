@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 
-import SButton from '../Button'
+import { SmButton } from '../index'
 
 describe('Button.vue', () => {
   test('create', () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'Just a primary button!',
       },
@@ -17,7 +17,7 @@ describe('Button.vue', () => {
   })
 
   test('round', () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'Round Button',
       },
@@ -29,7 +29,7 @@ describe('Button.vue', () => {
   })
 
   test('plain', () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'Plain Button',
       },
@@ -41,7 +41,7 @@ describe('Button.vue', () => {
   })
 
   test('disabled', async () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'can not click me!',
       },
@@ -57,7 +57,7 @@ describe('Button.vue', () => {
   })
 
   test('link button', () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'link text',
       },
@@ -70,7 +70,7 @@ describe('Button.vue', () => {
   })
 
   test('disabled link button', async () => {
-    const wrapper = mount(SButton, {
+    const wrapper = mount(SmButton, {
       slots: {
         default: 'disabled link',
       },
@@ -86,26 +86,27 @@ describe('Button.vue', () => {
   })
 
   test('icon button', () => {
-    const wrapper = mount(SButton, {
-      slots: {
-        icon: '<i class="i-uil-arrow-left" />',
+    const wrapper = mount(SmButton, {
+      shallow: true,
+      props: { icon: 'search' },
+    })
+
+    // expect(wrapper.find('sm-icon').attributes('name')).toBe('search')
+    expect(wrapper.findComponent({ name: 'sm-icon' }).vm.$options.name).toBe('sm-icon')
+
+    const slotWrapper = mount({
+      setup() {
+        return () => <SmButton v-slots={{ icon: () => <i class="i-uil-arrow-left" /> }} />
       },
     })
-    expect(wrapper.find('i').classes('sm-button__icon')).toBe(true)
 
-    const slotWrapper = mount(SButton, {
-      slots: { default: '', icon: '<i class="i-uil-arrow-left" />' },
-    })
-    expect(slotWrapper.findAll('i')[1].classes('i-uil-arrow-left')).toBe(true)
+    expect(slotWrapper.find('i').classes('i-uil-arrow-left')).toBe(true)
   })
 
   test('loading button', async () => {
-    const wrapper = mount(SButton, {
-      slots: { default: 'loading', loading: '<i class="i-uil-surprise" />' },
-      props: {
-        loading: true,
-      },
-    })
+    const wrapper = mount(() => (
+      <SmButton loading v-slots={{ loading: () => <i class="i-uil-surprise" /> }}></SmButton>
+    ))
 
     expect(wrapper.find('span').classes('sm-button__loading')).toBe(true)
     expect(wrapper.classes('is-loading')).toBe(true)

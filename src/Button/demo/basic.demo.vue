@@ -1,12 +1,12 @@
 <script lang="ts">
 import { ref } from 'vue'
 
-import { SButton } from '../index'
+import { SmButton } from '../index'
 
 export default {
   name: 'BasicButton',
 
-  components: { SButton },
+  components: { SmButton },
 
   setup() {
     const count = ref(0)
@@ -21,80 +21,80 @@ export default {
 
 <template>
   <div>
-    <SButton @click="onClick">Click {{ count }} time.</SButton>
-    <SButton type="primary">Primary</SButton>
-    <SButton type="success">Success</SButton>
-    <SButton type="warning">Warning</SButton>
-    <SButton type="danger">Danger</SButton>
-    <SButton type="info">Info</SButton>
+    <sm-button @click="onClick">Click {{ count }} time.</sm-button>
+    <sm-button type="primary">Primary</sm-button>
+    <sm-button type="success">Success</sm-button>
+    <sm-button type="warning">Warning</sm-button>
+    <sm-button type="danger">Danger</sm-button>
+    <sm-button type="info">Info</sm-button>
     <hr />
-    <SButton plain @click="onClick">Click {{ count }} time.</SButton>
-    <SButton plain type="primary">Primary</SButton>
-    <SButton plain type="success">Success</SButton>
-    <SButton plain type="warning">Warning</SButton>
-    <SButton plain type="danger">Danger</SButton>
-    <SButton plain type="info">Info</SButton>
+    <sm-button plain @click="onClick">Click {{ count }} time.</sm-button>
+    <sm-button plain type="primary">Primary</sm-button>
+    <sm-button plain type="success">Success</sm-button>
+    <sm-button plain type="warning">Warning</sm-button>
+    <sm-button plain type="danger">Danger</sm-button>
+    <sm-button plain type="info">Info</sm-button>
     <hr />
-    <SButton round @click="onClick">Click {{ count }} time.</SButton>
-    <SButton round type="primary">Primary</SButton>
-    <SButton round type="success">Success</SButton>
-    <SButton round type="warning">Warning</SButton>
-    <SButton round type="danger">Danger</SButton>
-    <SButton round type="info">Info</SButton>
+    <sm-button round @click="onClick">Click {{ count }} time.</sm-button>
+    <sm-button round type="primary">Primary</sm-button>
+    <sm-button round type="success">Success</sm-button>
+    <sm-button round type="warning">Warning</sm-button>
+    <sm-button round type="danger">Danger</sm-button>
+    <sm-button round type="info">Info</sm-button>
     <hr />
-    <SButton disabled>Default</SButton>
-    <SButton disabled type="primary">Primary</SButton>
-    <SButton disabled type="success">Success</SButton>
-    <SButton disabled type="warning">Warning</SButton>
-    <SButton disabled type="danger">Danger</SButton>
-    <SButton disabled type="info">Info</SButton>
+    <sm-button disabled>Default</sm-button>
+    <sm-button disabled type="primary">Primary</sm-button>
+    <sm-button disabled type="success">Success</sm-button>
+    <sm-button disabled type="warning">Warning</sm-button>
+    <sm-button disabled type="danger">Danger</sm-button>
+    <sm-button disabled type="info">Info</sm-button>
     <hr />
-    <SButton icon="i-uil-search">Search</SButton>
-    <SButton icon="i-uil-smile-wink" type="primary"></SButton>
-    <SButton icon="i-uil-dizzy-meh" type="success"></SButton>
-    <SButton icon="i-uil-angry" type="warning"></SButton>
-    <SButton icon="i-uil-annoyed" type="danger"></SButton>
-    <SButton icon="i-uil-annoyed-alt" type="info"></SButton>
-    <SButton plain icon="i-uil-search">Search</SButton>
-    <SButton plain icon="i-uil-smile-wink" type="primary"></SButton>
-    <SButton plain icon="i-uil-dizzy-meh" type="success"></SButton>
-    <SButton plain icon="i-uil-angry" type="warning"></SButton>
-    <SButton plain icon="i-uil-annoyed" type="danger"></SButton>
-    <SButton plain icon="i-uil-annoyed-alt" type="info"></SButton>
+    <sm-button icon="i-uil-search">Search</sm-button>
+    <sm-button icon="i-uil-smile-wink" type="primary"></sm-button>
+    <sm-button icon="i-uil-dizzy-meh" type="success"></sm-button>
+    <sm-button icon="i-uil-angry" type="warning"></sm-button>
+    <sm-button icon="i-uil-annoyed" type="danger"></sm-button>
+    <sm-button icon="i-uil-annoyed-alt" type="info"></sm-button>
+    <sm-button plain icon="i-uil-search">Search</sm-button>
+    <sm-button plain icon="i-uil-smile-wink" type="primary"></sm-button>
+    <sm-button plain icon="i-uil-dizzy-meh" type="success"></sm-button>
+    <sm-button plain icon="i-uil-angry" type="warning"></sm-button>
+    <sm-button plain icon="i-uil-annoyed" type="danger"></sm-button>
+    <sm-button plain icon="i-uil-annoyed-alt" type="info"></sm-button>
 
-    <SButton circle icon="i-uil-search"></SButton>
-    <SButton circle icon="i-uil-smile-wink" type="primary"></SButton>
-    <SButton circle icon="i-uil-dizzy-meh" type="success"></SButton>
-    <SButton circle icon="i-uil-angry" type="warning"></SButton>
-    <SButton circle icon="i-uil-annoyed" type="danger"></SButton>
-    <SButton circle icon="i-uil-annoyed-alt" type="info"></SButton>
+    <sm-button circle icon="i-uil-search"></sm-button>
+    <sm-button circle icon="i-uil-smile-wink" type="primary"></sm-button>
+    <sm-button circle icon="i-uil-dizzy-meh" type="success"></sm-button>
+    <sm-button circle icon="i-uil-angry" type="warning"></sm-button>
+    <sm-button circle icon="i-uil-annoyed" type="danger"></sm-button>
+    <sm-button circle icon="i-uil-annoyed-alt" type="info"></sm-button>
     <hr />
-    <SButton link>default</SButton>
-    <SButton link type="primary">Primary</SButton>
-    <SButton link type="success">Success</SButton>
-    <SButton link type="warning">Warning</SButton>
-    <SButton link type="danger">Danger</SButton>
-    <SButton link type="info">Info</SButton>
+    <sm-button link>default</sm-button>
+    <sm-button link type="primary">Primary</sm-button>
+    <sm-button link type="success">Success</sm-button>
+    <sm-button link type="warning">Warning</sm-button>
+    <sm-button link type="danger">Danger</sm-button>
+    <sm-button link type="info">Info</sm-button>
 
-    <SButton link disabled>default</SButton>
-    <SButton link disabled type="primary">Primary</SButton>
-    <SButton link disabled type="success">Success</SButton>
-    <SButton link disabled type="warning">Warning</SButton>
-    <SButton link disabled type="danger">Danger</SButton>
-    <SButton link disabled type="info">Info</SButton>
+    <sm-button link disabled>default</sm-button>
+    <sm-button link disabled type="primary">Primary</sm-button>
+    <sm-button link disabled type="success">Success</sm-button>
+    <sm-button link disabled type="warning">Warning</sm-button>
+    <sm-button link disabled type="danger">Danger</sm-button>
+    <sm-button link disabled type="info">Info</sm-button>
 
-    <SButton>
+    <sm-button>
       <template #icon><i class="i-uil-cog"></i></template>
       Settings
-    </SButton>
+    </sm-button>
 
-    <SButton loading type="primary">Loading</SButton>
-    <SButton loading loading-icon="i-uil-yin-yang" type="primary">Loading</SButton>
-    <SButton loading type="primary">
+    <sm-button loading type="primary">Loading</sm-button>
+    <sm-button loading loading-icon="i-uil-yin-yang" type="primary">Loading</sm-button>
+    <sm-button loading type="primary">
       <template #loading> <i class="i-uil-surprise"></i></template>
       Loading
-    </SButton>
+    </sm-button>
 
-    <SButton color="#626aef">Default</SButton>
+    <sm-button color="#626aef">Default</sm-button>
   </div>
 </template>

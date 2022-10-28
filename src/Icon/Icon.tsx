@@ -16,7 +16,7 @@ export default defineComponent({
     color: { type: String },
   },
 
-  setup(props, { slots }) {
+  setup(props) {
     const { size, color, name } = toRefs(props)
 
     const style = computed<CSSProperties>(() => {
@@ -28,8 +28,6 @@ export default defineComponent({
         color: color.value,
       }
     })
-
-    console.log(name.value)
 
     return () => <i class={['sm-icon', `${name.value}`]} style={style.value}></i>
   },

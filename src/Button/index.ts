@@ -1,11 +1,11 @@
 import { App } from 'vue'
 
-import SButton from './Button'
+import SmButton from './Button'
 
-export { SButton }
+export { SmButton }
 
 export default {
   install(app: App) {
-    app.component(SButton.name, SButton)
+    app.component(SmButton.name, SmButton)
   },
 }
