@@ -1,6 +1,6 @@
-import SButton from './Button'
 import { App } from 'vue'
-import 'uno.css'
+
+import SButton from './Button'
 
 export { SButton }
 

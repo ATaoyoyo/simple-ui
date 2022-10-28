@@ -10,13 +10,11 @@ export default () =>
     transformers: [transformerDirective(), transformerAttributifyJsx()],
     presets: [
       presetIcons({
-        autoInstall: true,
-        mode: 'mask',
+        mode: 'auto',
         prefix: 'i-',
+        autoInstall: true,
         extraProperties: {
           display: 'inline-block',
-          width: '1em',
-          height: '1em',
           'vertical-align': 'middle',
         },
       }),

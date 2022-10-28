@@ -680,7 +680,7 @@ packages:
       '@unocss/core': registry.npmmirror.com/@unocss/core/0.45.6
       '@unocss/preset-uno': registry.npmmirror.com/@unocss/preset-uno/0.45.6
       cac: 6.7.14
-      chokidar: 3.5.3
+      chokidar: registry.npmmirror.com/chokidar/3.5.3
       colorette: 2.0.19
       consola: 2.15.3
       fast-glob: 3.2.12
@@ -1111,21 +1111,6 @@ packages:
 
   /check-error/1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
-    dev: true
-
-  /chokidar/3.5.3:
-    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
-    engines: {node: '>= 8.10.0'}
-    dependencies:
-      anymatch: registry.npmmirror.com/anymatch/3.1.2
-      braces: registry.npmmirror.com/braces/3.0.2
-      glob-parent: registry.npmmirror.com/glob-parent/5.1.2
-      is-binary-path: registry.npmmirror.com/is-binary-path/2.1.0
-      is-glob: registry.npmmirror.com/is-glob/4.0.3
-      normalize-path: registry.npmmirror.com/normalize-path/3.0.0
-      readdirp: registry.npmmirror.com/readdirp/3.6.0
-    optionalDependencies:
-      fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
 
   /cli-cursor/3.1.0:
@@ -1604,7 +1589,7 @@ packages:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
       '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
+      glob-parent: registry.npmmirror.com/glob-parent/5.1.2
       merge2: 1.4.1
       micromatch: 4.0.5
     dev: true
@@ -1679,13 +1664,6 @@ packages:
   /get-port/3.2.0:
     resolution: {integrity: sha512-x5UJKlgeUiNT8nyo/AcnwLnZuZNcSjSw0kogRB+Whd1fjjFq4B1hySFxSFWWSn4mIBzg3sRNUDFYc4g5gjPoLg==}
     engines: {node: '>=4'}
-    dev: true
-
-  /glob-parent/5.1.2:
-    resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
-    engines: {node: '>= 6'}
-    dependencies:
-      is-glob: registry.npmmirror.com/is-glob/4.0.3
     dev: true
 
   /glob-parent/6.0.2:
