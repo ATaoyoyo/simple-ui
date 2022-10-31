@@ -102,7 +102,7 @@ export default defineComponent({
       >
         {icon.value || slots.icon ? ButtonIcon : ''}
         {loading.value ? LoadingIcon : ''}
-        {slots.default ? slots.default() : ''}
+        <span>{slots.default ? slots.default() : ''}</span>
       </button>
     )
   },

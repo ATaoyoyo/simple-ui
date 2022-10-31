@@ -4,13 +4,14 @@ import type { Component } from 'vue'
 import '@unocss/reset/normalize.css'
 import 'uno.css'
 
-import SButton from './Button/Button'
-import SmIcon from './Icon/Icon'
+import { SmButton } from './Button'
+import { SmButtonGroup } from './ButtonGroup'
+import { SmIcon } from './Icon'
 
 // 单独导出组件
-export { SButton, SmIcon }
+export { SmButton, SmButtonGroup, SmIcon }
 
-const Components: Component[] = [SButton, SmIcon]
+const Components: Component[] = [SmButton, SmButtonGroup, SmIcon]
 
 // install方法，全部导出
 export default {

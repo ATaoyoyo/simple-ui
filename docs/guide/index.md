@@ -21,7 +21,7 @@ import { createApp } from 'vue'
 import SimpleUI from 'simple-ui'
 
 const App = {
-  template: `<SButton>Hello Terrific UI👋</SButton>`,
+  template: `<SButton>Hello Simple UI👋</SButton>`,
 }
 
 createApp(App).use(SimpleUI).mount('#app')

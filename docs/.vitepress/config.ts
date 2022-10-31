@@ -1,13 +1,13 @@
 const sidebar = [
   {
-    text: 'Introduction',
-    items: [{ text: 'Guide', link: '/guide/' }],
+    text: '简介',
+    items: [{ text: '快速开始', link: '/guide/' }],
   },
   {
-    text: 'Components',
+    text: '组件',
     items: [
-      { text: 'Button', link: '/components/button/' },
-      { text: 'Border', link: '/components/border/' },
+      { text: 'Button', link: '/components/button' },
+      { text: 'Border', link: '/components/border' },
     ],
   },
 ]
@@ -30,7 +30,7 @@ const config = {
     sidebar,
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present ATAOYOYO',
+      copyright: 'Copyright © 2022-present ATAOYOYO',
     },
   },
 

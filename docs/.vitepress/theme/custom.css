@@ -1,4 +1,5 @@
 .vp-doc table {
+  display: table;
   width: 100%;
 }
 
