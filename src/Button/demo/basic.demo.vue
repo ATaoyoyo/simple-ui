@@ -96,5 +96,21 @@ export default {
     </sm-button>
 
     <sm-button color="#626aef">Default</sm-button>
+
+    <sm-button size="large">Larger</sm-button>
+    <sm-button size="default">Default</sm-button>
+    <sm-button size="small">Small</sm-button>
+
+    <sm-button icon="i-uil-search" size="large">Larger</sm-button>
+    <sm-button icon="i-uil-search" size="default">Default</sm-button>
+    <sm-button icon="i-uil-search" size="small">Small</sm-button>
+
+    <sm-button round size="large">Larger</sm-button>
+    <sm-button round size="default">Default</sm-button>
+    <sm-button round size="small">Small</sm-button>
+
+    <sm-button icon="i-uil-search" circle size="large"></sm-button>
+    <sm-button icon="i-uil-search" circle size="default"></sm-button>
+    <sm-button icon="i-uil-search" circle size="small"></sm-button>
   </div>
 </template>

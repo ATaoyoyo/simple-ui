@@ -55,7 +55,7 @@ export default defineComponent({
       loadingIcon,
       nativeType,
       circle,
-      color,
+      size,
     } = toRefs(props)
 
     const handleClick = (evt: MouseEvent) => {
@@ -94,14 +94,10 @@ export default defineComponent({
           `${circle.value ? 'is-circle' : ''}`,
           `${loading.value ? 'is-loading' : ''}`,
           `${disabled.value ? 'is-disabled' : ''}`,
+          `${size.value ? 'is-' + size.value : 'is-default'}`,
         ]}
         disabled={disabled.value}
         type={nativeType.value}
-        style={{
-          backgroundColor: color.value,
-          borderColor: color.value,
-          color: color.value && '#fff',
-        }}
         onClick={(e: MouseEvent) => handleClick(e)}
       >
         {icon.value || slots.icon ? ButtonIcon : ''}
