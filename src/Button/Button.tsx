@@ -4,6 +4,8 @@ import type { Type, NativeType, Size } from './interface'
 
 import './style/button.css'
 
+import { SmIcon } from '../Icon'
+
 const buttonProps = {
   type: {
     type: String as PropType<Type>,
@@ -35,6 +37,8 @@ const buttonProps = {
 export default defineComponent({
   name: 'sm-button',
 
+  components: { SmIcon },
+
   props: buttonProps,
 
   emits: ['click'],
@@ -51,7 +55,7 @@ export default defineComponent({
       loadingIcon,
       nativeType,
       circle,
-      color,
+      size,
     } = toRefs(props)
 
     const handleClick = (evt: MouseEvent) => {
@@ -60,9 +64,9 @@ export default defineComponent({
     }
 
     const ButtonIcon = (
-      <i class={['sm-button__icon', `${slots.default ? 'mr-1' : ''}`, `${icon.value}`]}>
-        {slots.icon?.()}
-      </i>
+      <span class={['sm-button__icon', slots.default ? ' mr-1' : '']}>
+        {slots.icon ? slots.icon() : <sm-icon name={icon.value} />}
+      </span>
     )
 
     const LoadingIcon = (
@@ -90,14 +94,10 @@ export default defineComponent({
           `${circle.value ? 'is-circle' : ''}`,
           `${loading.value ? 'is-loading' : ''}`,
           `${disabled.value ? 'is-disabled' : ''}`,
+          `${size.value ? 'is-' + size.value : 'is-default'}`,
         ]}
         disabled={disabled.value}
         type={nativeType.value}
-        style={{
-          backgroundColor: color.value,
-          borderColor: color.value,
-          color: color.value && '#fff',
-        }}
         onClick={(e: MouseEvent) => handleClick(e)}
       >
         {icon.value || slots.icon ? ButtonIcon : ''}

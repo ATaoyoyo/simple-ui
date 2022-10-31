@@ -1,0 +1,48 @@
+:root {
+  --sm-button-group-border-color: rgba(255, 255, 255, 0.5)
+}
+
+.sm-button__group > .sm-button {
+  margin: 0;
+  float: left;
+  position: relative;
+}
+
+.sm-button__group + .sm-button__group {
+  margin-left: 12px;
+}
+
+
+.sm-button__group {
+  display: inline-block;
+}
+
+.sm-button__group > .sm-button:first-child:last-child {
+  border-radius: 4px;
+}
+
+.sm-button__group > .sm-button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.sm-button__group > .sm-button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-color: var(--sm-button-group-border-color);
+}
+
+.sm-button__group > .sm-button:first-child {
+  border-left-color: transparent;
+}
+
+.sm-button__group > .sm-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  border-left: 1px solid var(--sm-button-group-border-color);
+  border-right: 1px solid var(--sm-button-group-border-color);
+}
+
+.sm-button__group > .sm-button:not(:last-child) {
+  margin-right: -1px;
+}

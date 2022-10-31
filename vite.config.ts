@@ -21,7 +21,7 @@ export default defineConfig({
     reportCompressedSize: true, // 生成压缩大小报告
     cssCodeSplit: true,
     lib: {
-      entry: './src/entry.ts',
+      entry: './src/main.ts',
       name: 'SimpleUI',
       fileName: 'simply-ui',
       // 导出模块格式
